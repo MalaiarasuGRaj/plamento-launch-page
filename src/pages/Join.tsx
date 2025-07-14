@@ -104,11 +104,20 @@ const Join = () => {
 
   return (
     <div className="min-h-screen">
+      <style jsx global>{`
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+          -webkit-box-shadow: 0 0 0px 1000px #1f2937 inset !important;
+          -webkit-text-fill-color: #f9fafb !important;
+        }
+      `}</style>
       <Navigation />
       <div className="pt-20 min-h-screen bg-gradient-hero">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 pt-14">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Join <span className="gradient-text">Plamento</span>
             </h1>
@@ -126,7 +135,7 @@ const Join = () => {
                   <div className="flex items-start space-x-3">
                     <span className="text-2xl">⚡</span>
                     <div>
-                      <h3 className="font-semibold mb-2">Early Access</h3>
+                      <h3 className="font-bold mb-2 gradient-text">Early Access</h3>
                       <p className="text-muted-foreground text-sm">Use the platform before public release and start preparing early.</p>
                     </div>
                   </div>
@@ -134,9 +143,9 @@ const Join = () => {
                 
                 <div className="bg-card p-6 rounded-xl shadow-soft">
                   <div className="flex items-start space-x-3">
-                    <span className="text-2xl">🛠</span>
+                    <span className="text-2xl">🔍</span>
                     <div>
-                      <h3 className="font-semibold mb-2">Feature Preview</h3>
+                      <h3 className="font-bold mb-2 gradient-text">Feature Preview</h3>
                       <p className="text-muted-foreground text-sm">Try out tools like Resume Checker and JD Analyzer before others.</p>
                     </div>
                   </div>
@@ -146,7 +155,7 @@ const Join = () => {
                   <div className="flex items-start space-x-3">
                     <span className="text-2xl">💡</span>
                     <div>
-                      <h3 className="font-semibold mb-2">Influence the Product</h3>
+                      <h3 className="font-bold mb-2 gradient-text">Influence the Product</h3>
                       <p className="text-muted-foreground text-sm">Share feedback and help us shape features to better suit student needs.</p>
                     </div>
                   </div>
@@ -156,21 +165,22 @@ const Join = () => {
                   <div className="flex items-start space-x-3">
                     <span className="text-2xl">🎁</span>
                     <div>
-                      <h3 className="font-semibold mb-2">Surprise Perks</h3>
+                      <h3 className="font-bold mb-2 gradient-text">Surprise Perks</h3>
                       <p className="text-muted-foreground text-sm">Eligible for giveaways, discount coupons, or free premium access.</p>
                     </div>
                   </div>
                 </div>
                 
-                <div className="bg-card p-6 rounded-xl shadow-soft md:col-span-2 lg:col-span-1">
+                <div className="bg-card p-6 rounded-xl shadow-soft">
                   <div className="flex items-start space-x-3">
                     <span className="text-2xl">🚀</span>
                     <div>
-                      <h3 className="font-semibold mb-2">Placement-Ready, First</h3>
+                      <h3 className="font-bold mb-2 gradient-text">Placement-Ready, First</h3>
                       <p className="text-muted-foreground text-sm">Be placement-ready before the rest. Stay one step ahead with smart prep tools.</p>
                     </div>
                   </div>
                 </div>
+
               </div>
             </div>
           </div>
@@ -191,7 +201,7 @@ const Join = () => {
             </div>
 
             {/* Right Side - Registration Form */}
-            <div className="bg-card p-8 rounded-2xl shadow-medium">
+            <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-8 rounded-2xl">
               {!isSubmitted ? (
                 <>
                   <h2 className="text-2xl font-semibold mb-6">Join the Waitlist</h2>

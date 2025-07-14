@@ -1,14 +1,14 @@
-﻿import Navigation from '@/components/Navigation';
+import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import resumeChecker from '../assets/resumechecker.png';
+import problem from '../assets/ai-collaboration.jpg';
 import jobAnalyzer from '../assets/jobanalyzer.png';
 import aiInterview from '../assets/aiinterview.png';
 
 const About = () => {
   return (
     <div className="min-h-screen">
-      <Navigation />
-      <div className="pt-20 min-h-screen bg-gradient-to-b from-background to-muted/20">
+      <Navigation />+      <div className="pt-20 min-h-screen">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -20,7 +20,7 @@ const About = () => {
           </div>
 
           <div className="grid gap-12">
-            <div className="feature-card">
+            <div className="feature-card bg-gray-800 bg-opacity-50 rounded-xl p-6">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div>
                   <h2 className="text-2xl font-semibold mb-4">The Problem</h2>
@@ -33,14 +33,14 @@ const About = () => {
                   </p>
                 </div>
                 <div className="relative">
-                  <img 
-                    src={resumeChecker} 
+                  <img
+                    src={problem}
                     alt="Resume analysis and improvement tool"
                     className="w-full h-64 object-cover rounded-xl shadow-medium"
                   />
                 </div>
               </div>
-            </div>
+            </div> {/* Closing div for The Problem */}
 
             <div className="feature-card">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -103,4 +103,3 @@ const About = () => {
 };
 
 export default About;
-

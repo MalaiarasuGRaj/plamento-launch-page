@@ -46,13 +46,13 @@ const Team = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <div className="pt-20 bg-gradient-to-b from-background to-muted/20">
+      <div className="pt-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
           {/* Mission */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              🌟 Our <span className="gradient-text">Mission</span>
+              Our <span className="gradient-text">Mission</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               To democratize placement preparation with AI tools that are smart, personalized, 
@@ -63,17 +63,26 @@ const Team = () => {
           {/* Core Team */}
           <div className="text-center mb-12">
             <h2 className="text-3xl font-semibold mb-6">💼 Our Core Team</h2>
-            <div className="flex flex-wrap justify-center gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
               {coreTeam.map((member, index) => (
-                <div key={index} className="w-60 text-center group hover:scale-105 transition-all">
-                  <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden shadow-lg border-4 border-light-blue">
+
+                <div key={index} className="bg-gray-800 text-white rounded-lg shadow-lg p-6 text-center flex flex-col items-center transition-transform transform hover:scale-105 hover:shadow-xl duration-300">
+                  <div className="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-primary">
                     <img src={member.photo} alt={member.name} className="w-full h-full object-cover" />
                   </div>
                   <h3 className="text-lg font-semibold">{member.name}</h3>
                   <p className="text-sm text-muted-foreground">{member.role}</p>
                   <div className="flex justify-center gap-4 mt-2">
-                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">LinkedIn</a>
-                    <a href={member.github} target="_blank" rel="noopener noreferrer" className="text-gray-800 underline">GitHub</a>
+                    <div className="flex justify-center">
+                      <a href={member.linkedin} target='_blank' rel='noopener noreferrer' className="text-blue-500 hover:text-blue-600 transition-colors underline">
+                        LinkedIn
+                      </a>
+                    </div>
+                    <div className="flex justify-center">
+                      <a href={member.github} target="_blank" rel="noopener noreferrer" className="text-gray-800 underline">GitHub</a>
+
+                    </div>
                   </div>
                 </div>
               ))}

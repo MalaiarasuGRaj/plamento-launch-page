@@ -61,7 +61,7 @@ const FeaturesSection = () => {
   return (
     <section 
       ref={sectionRef}
-      className="py-20 bg-gradient-to-b from-background to-muted/20"
+      className="py-20"
       id="features"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -71,7 +71,7 @@ const FeaturesSection = () => {
             Why Choose{' '}
             <span className="gradient-text">Plamento</span>?
           </h2>
-          <p className={`text-lg text-muted-foreground max-w-3xl mx-auto fade-in-up ${isVisible ? 'animate' : ''} stagger-1`}>
+          <p className={`text-lg text-muted-foreground dark:text-gray-400 max-w-3xl mx-auto fade-in-up ${isVisible ? 'animate' : ''} stagger-1`}>
             Our AI-powered platform provides comprehensive interview preparation with cutting-edge technology 
             and personalized feedback to help you succeed.
           </p>
@@ -84,18 +84,18 @@ const FeaturesSection = () => {
             return (
               <div
                 key={index}
-                className={`bg-white p-8 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 fade-in-up ${isVisible ? 'animate' : ''} ${feature.delay} w-full h-[280px] max-w-[320px] mx-auto`}
+                className={`bg-gray-800 text-white rounded-lg shadow-lg p-6 text-center flex flex-col items-center hover:shadow-medium transition-all duration-300 hover:-translate-y-1 fade-in-up ${isVisible ? 'animate' : ''} ${feature.delay} w-full h-[280px] max-w-[320px] mx-auto`}
               >
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center">
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-gray-900">
-                  {feature.title}
+                <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">
+                  {feature.title} {/* Consider making this white as well if needed */}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {feature.description}
+                <p className="text-gray-600 leading-relaxed dark:text-white">
+                  {feature.description} {/* Consider making this a lighter grey as well if needed */}
                 </p>
               </div>
             );
@@ -104,24 +104,24 @@ const FeaturesSection = () => {
 
         {/* Features Grid - 2 cards in bottom row, centered */}
         <div className="flex justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:max-w-[calc(320px*2+32px)]"> {/* Adjusted max-w and gap to align with top row */}
             {bottomRowFeatures.map((feature, index) => {
               const IconComponent = feature.icon;
               return (
                 <div
                   key={index}
-                  className={`bg-white p-8 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 fade-in-up ${isVisible ? 'animate' : ''} ${feature.delay} w-full h-[280px] max-w-[320px] mx-auto`}
+                  className={`bg-gray-800 text-white rounded-lg shadow-lg p-6 text-center flex flex-col items-center hover:shadow-medium transition-all duration-300 hover:-translate-y-1 fade-in-up ${isVisible ? 'animate' : ''} ${feature.delay} w-full h-[280px] max-w-[320px] mx-auto`}
                 >
                   <div className="mb-6">
                     <div className="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center">
                       <IconComponent className="w-8 h-8 text-white" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold mb-4 text-gray-900">
-                    {feature.title}
+                <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">
+                    {feature.title} {/* Consider making this white as well if needed */}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    {feature.description}
+                  <p className="text-gray-600 leading-relaxed dark:text-white">
+                    {feature.description} {/* Consider making this a lighter grey as well if needed */}
                   </p>
                 </div>
               );

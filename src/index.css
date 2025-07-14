@@ -5,11 +5,18 @@
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
+/* Prevent autofill from changing background color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  box-shadow: 0 0 0px 1000px var(--background) inset !important;
+}
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 0 0% 0%; /* Changed to black */
+    --foreground: 210 40% 98%; /* Changed to a light color */
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -44,7 +51,7 @@ All colors MUST be HSL.
     --radius: 0.75rem;
 
     /* AI/Tech Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-primary: hsl(var(--primary));
     --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.1), hsl(var(--accent) / 0.05));
     --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted) / 0.3));
 
@@ -75,7 +82,7 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 0 0% 0%;
     --foreground: 210 40% 98%;
 
     --card: 222.2 84% 4.9%;
@@ -119,8 +126,8 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
-  }
+    @apply bg-background text-foreground font-sans p-0 m-0;
+  } 
 }
 
 @layer components {
@@ -135,7 +142,8 @@ All colors MUST be HSL.
 
   /* Feature Card Styles */
   .feature-card {
-    @apply bg-gradient-to-br from-card to-muted/30 p-6 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 border border-border/50 flex flex-col justify-center text-center;
+    /* Changed background for dark mode */
+ @apply bg-gradient-to-br from-card to-muted/30 p-6 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 border border-border/50 flex flex-col justify-center text-center dark:bg-[#1a1a1a];
   }
 
   /* Feature Square Styles */
@@ -166,5 +174,9 @@ All colors MUST be HSL.
   /* Gradient Text */
   .gradient-text {
     @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+
+  .dark .card-text-container h3 {
+    color: black;
   }
 }
