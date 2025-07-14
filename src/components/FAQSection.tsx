@@ -28,7 +28,7 @@ const FAQSection = () => {
   return (
     <section className="py-20 bg-black text-white" id="faq">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-6">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Frequently Asked <span className="gradient-text">Questions</span>
           </h2>

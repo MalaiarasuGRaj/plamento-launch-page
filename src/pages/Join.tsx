@@ -103,16 +103,17 @@ const Join = () => {
   };
 
   return (
-    <div className="min-h-screen">
-      <style jsx global>{`
+    <>
+      <style jsx>{`
         input:-webkit-autofill,
         input:-webkit-autofill:hover,
         input:-webkit-autofill:focus,
         input:-webkit-autofill:active {
-          -webkit-box-shadow: 0 0 0px 1000px #1f2937 inset !important;
+          -webkit-box-shadow: 0 0 0 30px #1f2937 inset !important;
           -webkit-text-fill-color: #f9fafb !important;
         }
       `}</style>
+    <div className="min-h-screen">
       <Navigation />
       <div className="pt-20 min-h-screen bg-gradient-hero">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -127,11 +128,11 @@ const Join = () => {
           </div>
 
           {/* Why Join Waitlist Section */}
-          <div className="mb-16">
+          <div className="mb-24">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-center mb-12">Why Join Waitlist?</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="bg-card p-6 rounded-xl shadow-soft">
+                <div className="bg-card p-6 rounded-xl shadow-soft flex">
                   <div className="flex items-start space-x-3">
                     <span className="text-2xl">⚡</span>
                     <div>
@@ -141,7 +142,7 @@ const Join = () => {
                   </div>
                 </div>
                 
-                <div className="bg-card p-6 rounded-xl shadow-soft">
+                <div className="bg-card p-6 rounded-xl shadow-soft flex">
                   <div className="flex items-start space-x-3">
                     <span className="text-2xl">🔍</span>
                     <div>
@@ -185,8 +186,12 @@ const Join = () => {
             </div>
           </div>
 
+          {/* Divider */}
+          <div className="border-b border-gray-700 my-12"></div>
+
+
           {/* Registration Section */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-16 mt-6">
             {/* Left Side - Content */}
             <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-8 rounded-2xl">
               <h2 className="text-3xl font-bold mb-4">Be First in Line.</h2>
@@ -323,6 +328,7 @@ const Join = () => {
       </div>
       <Footer />
     </div>
+    </>
   );
 };
 
