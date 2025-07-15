@@ -132,52 +132,52 @@ const Join = () => {
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-center mb-12">Why Join Waitlist?</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="bg-card p-6 rounded-xl shadow-soft flex">
+                <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-6 rounded-xl flex transition-all duration-300 hover:from-gray-800 hover:to-gray-700 hover:shadow-lg hover:scale-105">
                   <div className="flex items-start space-x-3">
                     <span className="text-2xl">⚡</span>
                     <div>
                       <h3 className="font-bold mb-2 gradient-text">Early Access</h3>
-                      <p className="text-muted-foreground text-sm">Use the platform before public release and start preparing early.</p>
+                      <p className="text-gray-300 text-sm">Use the platform before public release and start preparing early.</p>
                     </div>
                   </div>
                 </div>
                 
-                <div className="bg-card p-6 rounded-xl shadow-soft flex">
+                <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-6 rounded-xl flex transition-all duration-300 hover:from-gray-800 hover:to-gray-700 hover:shadow-lg hover:scale-105">
                   <div className="flex items-start space-x-3">
                     <span className="text-2xl">🔍</span>
                     <div>
                       <h3 className="font-bold mb-2 gradient-text">Feature Preview</h3>
-                      <p className="text-muted-foreground text-sm">Try out tools like Resume Checker and JD Analyzer before others.</p>
+                      <p className="text-gray-300 text-sm">Try out tools like Resume Checker and JD Analyzer before others.</p>
                     </div>
                   </div>
                 </div>
                 
-                <div className="bg-card p-6 rounded-xl shadow-soft">
+                <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-6 rounded-xl transition-all duration-300 hover:from-gray-800 hover:to-gray-700 hover:shadow-lg hover:scale-105">
                   <div className="flex items-start space-x-3">
                     <span className="text-2xl">💡</span>
                     <div>
                       <h3 className="font-bold mb-2 gradient-text">Influence the Product</h3>
-                      <p className="text-muted-foreground text-sm">Share feedback and help us shape features to better suit student needs.</p>
+                      <p className="text-gray-300 text-sm">Share feedback and help us shape features to better suit student needs.</p>
                     </div>
                   </div>
                 </div>
-                
-                <div className="bg-card p-6 rounded-xl shadow-soft">
+
+                <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-6 rounded-xl transition-all duration-300 hover:from-gray-800 hover:to-gray-700 hover:shadow-lg hover:scale-105">
                   <div className="flex items-start space-x-3">
                     <span className="text-2xl">🎁</span>
                     <div>
                       <h3 className="font-bold mb-2 gradient-text">Surprise Perks</h3>
-                      <p className="text-muted-foreground text-sm">Eligible for giveaways, discount coupons, or free premium access.</p>
+                      <p className="text-gray-300 text-sm">Eligible for giveaways, discount coupons, or free premium access.</p>
                     </div>
                   </div>
                 </div>
                 
-                <div className="bg-card p-6 rounded-xl shadow-soft">
+                <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-6 rounded-xl transition-all duration-300 hover:from-gray-800 hover:to-gray-700 hover:shadow-lg hover:scale-105">
                   <div className="flex items-start space-x-3">
                     <span className="text-2xl">🚀</span>
                     <div>
                       <h3 className="font-bold mb-2 gradient-text">Placement-Ready, First</h3>
-                      <p className="text-muted-foreground text-sm">Be placement-ready before the rest. Stay one step ahead with smart prep tools.</p>
+                      <p className="text-gray-300 text-sm">Be placement-ready before the rest. Stay one step ahead with smart prep tools.</p>
                     </div>
                   </div>
                 </div>

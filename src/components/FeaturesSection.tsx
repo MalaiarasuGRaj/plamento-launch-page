@@ -91,10 +91,10 @@ const FeaturesSection = () => {
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">
+                <h3 className="text-xl font-bold mb-4 gradient-text">
                   {feature.title} {/* Consider making this white as well if needed */}
                 </h3>
-                <p className="text-gray-600 leading-relaxed dark:text-white">
+                <p className="text-gray-300 text-sm">
                   {feature.description} {/* Consider making this a lighter grey as well if needed */}
                 </p>
               </div>
@@ -118,9 +118,9 @@ const FeaturesSection = () => {
                     </div>
                   </div>
                 <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">
-                    {feature.title} {/* Consider making this white as well if needed */}
+                    <span className="gradient-text">{feature.title}</span> {/* Consider making this white as well if needed */}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed dark:text-white">
+                  <p className="text-gray-300 text-sm">
                     {feature.description} {/* Consider making this a lighter grey as well if needed */}
                   </p>
                 </div>
