@@ -3,7 +3,6 @@ import Footer from '@/components/Footer';
 import resumeChecker from '../assets/resumechecker.png';
 import problem from '../assets/ai-collaboration.jpg';
 import jobAnalyzer from '../assets/jobanalyzer.png';
-import aiInterview from '../assets/aiinterview.png';
 
 const About = () => {
   return (
@@ -20,18 +19,18 @@ const About = () => {
           </div>
 
           <div className="grid gap-16">
-            <div className="feature-card bg-gray-800 text-white rounded-2xl p-8 shadow-2xl">
+            <div className="bg-gray-800 text-white rounded-lg shadow-lg p-6 text-center flex flex-col items-center transition-transform transform hover:scale-108 hover:shadow-xlInfluence the Product duration-300">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div>
-                  <h2 className="text-2xl font-semibold mb-4">
-                    <span className="gradient-text">The Problem</span>
+                  <h2 className="text-2xl font-semibold mb-4 text-left">
+                    <span className="gradient-text mx-auto block w-max">The Problem</span>
                   </h2>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Every year, thousands of students struggle to crack placement interviews-not because they lack knowledge,
+                  <p className="text-gray-300 text-base">
+                    Every year, thousands of individuals struggle to crack placement interviews-not because they lack knowledge,
                     but because they lack personalized, real-world preparation tools.
                     <br /><br />
                     Resumes get rejected by ATS systems. Job descriptions feel overwhelming. Interviews feel unpredictable.
-                    And most importantly, students don't know what to prepare or how close they are to being job-ready.
+                    And most importantly, many candidates don't know what to prepare or how close they are to being job-ready.
                   </p>
                 </div>
                 <div className="relative">
@@ -42,9 +41,8 @@ const About = () => {
                   />
                 </div>
               </div>
-            </div> {/* Closing div for The Problem */}
-
-            <div className="feature-card bg-gray-800 text-white rounded-2xl p-8 shadow-2xl">
+            </div>
+            <div className="bg-gray-800 text-white rounded-lg shadow-lg p-6 text-center flex flex-col items-center transition-transform transform hover:scale-108 hover:shadow-xl duration-300">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div className="order-2 lg:order-1 relative">
                   <img 
@@ -57,7 +55,7 @@ const About = () => {
                   <h2 className="text-2xl font-semibold mb-4">
                     <span className="gradient-text">Our Vision</span>
                   </h2>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-gray-300 text-base">
                     We are building a smart AI-powered companion for every student preparing for placements.
                     <br /><br />
                     Our vision is to bridge the gap between job seekers and job roles using intelligent tools
@@ -67,45 +65,45 @@ const About = () => {
               </div>
             </div>
 
-            <div className="feature-card bg-gray-800 text-white rounded-2xl p-8 shadow-2xl">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                <div>
-                  <h2 className="text-2xl font-semibold mb-4">
-                    <span className="gradient-text">Our Toolkit Includes</span>
-                  </h2>
-                  <ul className="text-muted-foreground leading-relaxed list-disc pl-5 space-y-2">
-                    <li><strong> ATS Resume Checker:</strong> Ensure your resume passes real-world ATS filters with proper keywords and format.</li>
-                    <li><strong> Job Description Analyzer:</strong> Upload a JD and instantly compare your resume against it with actionable insights.</li>
-                    <li><strong> AI-Powered Mock Interview:</strong> Practice with HR and technical questions. Get instant NLP-based feedback and confidence scoring.</li>
-                    <li><strong> Domain-Specific Question Bank:</strong> Access MCQs and quizzes tailored to your job role for focused preparation.</li>
-                  </ul>
+            <div className="text-center mb-12">
+              <h2 className="text-2xl font-semibold mb-8">
+                <span className="gradient-text">Our Toolkit Includes</span>
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {/* Tool 1 */}
+                <div className="bg-gray-800 text-white rounded-lg shadow-lg p-6 text-center flex flex-col items-center transition-transform transform hover:scale-105 hover:shadow-xl duration-300">
+                  <h3 className="text-lg font-bold mb-2">ATS Resume Checker</h3>
+                  <p className="text-gray-300 text-sm">
+                    Ensure your resume passes real-world ATS filters with proper keywords and format.
+                  </p>
                 </div>
-                <div className="relative">
-                  <img 
-                    src={aiInterview} 
-                    alt="AI mock interview simulation"
-                    className="w-full h-64 object-cover rounded-xl shadow-medium"
-                  />
+                {/* Tool 2 */}
+                <div className="bg-gray-800 text-white rounded-lg shadow-lg p-6 text-center flex flex-col items-center transition-transform transform hover:scale-105 hover:shadow-xl duration-300">
+                  <h3 className="text-lg font-bold mb-2">Job Description Analyzer</h3>
+                  <p className="text-gray-300 text-sm">
+                    Upload a JD and instantly compare your resume against it with actionable insights.
+                  </p>
                 </div>
-              </div>
-            </div>
-
-            <div className="feature-card bg-gray-800 text-white rounded-2xl p-8 shadow-2xl">
-              <div className="text-center">
-                <h2 className="text-2xl font-semibold mb-4">
-                    <span className="gradient-text">Our Mission</span>
-                </h2>
-                <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-                  To empower every student with the tools and confidence they need to navigate the placement process,
-                  land their dream job, and unlock their potential â€” no matter where they come from.
-                </p>
+                {/* Tool 3 */}
+                <div className="bg-gray-800 text-white rounded-lg shadow-lg p-6 text-center flex flex-col items-center transition-transform transform hover:scale-105 hover:shadow-xl duration-300">
+                  <h3 className="text-lg font-bold mb-2">AI-Powered Mock Interview</h3>
+                  <p className="text-gray-300 text-sm">
+                    Practice with HR and technical questions. Get instant NLP-based feedback and confidence scoring.
+                  </p>
+                </div>
+                {/* Tool 4 */}
+                <div className="bg-gray-800 text-white rounded-lg shadow-lg p-6 text-center flex flex-col items-center transition-transform transform hover:scale-105 hover:shadow-xl duration-300">
+                  <h3 className="text-lg font-bold mb-2">Domain-Specific Question Bank</h3>
+                  <p className="text-gray-300 text-sm">
+                    Access MCQs and quizzes tailored to your job role for focused preparation.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-
         </div>
       </div>
-      <Footer />
+     <Footer />
     </div>
   );
 };

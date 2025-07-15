@@ -126,7 +126,7 @@ input:-webkit-autofill:active {
   }
 
   body {
-    @apply bg-background text-foreground font-sans p-0 m-0;
+    @apply bg-background text-foreground font-sans p-0 m-0 bg-black;
   } 
 }
 

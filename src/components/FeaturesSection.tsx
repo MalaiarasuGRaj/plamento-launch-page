@@ -103,8 +103,8 @@ const FeaturesSection = () => {
         </div>
 
         {/* Features Grid - 2 cards in bottom row, centered */}
-        <div className="flex justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:max-w-[calc(320px*2+32px)]"> {/* Adjusted max-w and gap to align with top row */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="col-start-1 col-end-4 grid grid-cols-1 md:grid-cols-2 gap-8 md:max-w-[calc(320px*2+32px)] mx-auto">
             {bottomRowFeatures.map((feature, index) => {
               const IconComponent = feature.icon;
               return (

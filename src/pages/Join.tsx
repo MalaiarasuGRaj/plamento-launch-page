@@ -131,8 +131,8 @@ const Join = () => {
           <div className="mb-24">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-center mb-12">Why Join Waitlist?</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-6 rounded-xl flex transition-all duration-300 hover:from-gray-800 hover:to-gray-700 hover:shadow-lg hover:scale-105">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-6 rounded-xl flex transition-all duration-300 hover:from-gray-800 hover:to-gray-700 hover:shadow-lg hover:scale-105 col-span-1">
                   <div className="flex items-start space-x-3">
                     <span className="text-2xl">⚡</span>
                     <div>
@@ -142,7 +142,7 @@ const Join = () => {
                   </div>
                 </div>
                 
-                <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-6 rounded-xl flex transition-all duration-300 hover:from-gray-800 hover:to-gray-700 hover:shadow-lg hover:scale-105">
+                <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-6 rounded-xl flex transition-all duration-300 hover:from-gray-800 hover:to-gray-700 hover:shadow-lg hover:scale-105 col-span-1">
                   <div className="flex items-start space-x-3">
                     <span className="text-2xl">🔍</span>
                     <div>
@@ -152,7 +152,7 @@ const Join = () => {
                   </div>
                 </div>
                 
-                <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-6 rounded-xl transition-all duration-300 hover:from-gray-800 hover:to-gray-700 hover:shadow-lg hover:scale-105">
+                <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-6 rounded-xl transition-all duration-300 hover:from-gray-800 hover:to-gray-700 hover:shadow-lg hover:scale-105 col-span-1">
                   <div className="flex items-start space-x-3">
                     <span className="text-2xl">💡</span>
                     <div>
@@ -162,7 +162,7 @@ const Join = () => {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-6 rounded-xl transition-all duration-300 hover:from-gray-800 hover:to-gray-700 hover:shadow-lg hover:scale-105">
+                <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-6 rounded-xl transition-all duration-300 hover:from-gray-800 hover:to-gray-700 hover:shadow-lg hover:scale-105 col-span-1">
                   <div className="flex items-start space-x-3">
                     <span className="text-2xl">🎁</span>
                     <div>
@@ -172,7 +172,7 @@ const Join = () => {
                   </div>
                 </div>
                 
-                <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-6 rounded-xl transition-all duration-300 hover:from-gray-800 hover:to-gray-700 hover:shadow-lg hover:scale-105">
+                <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-6 rounded-xl transition-all duration-300 hover:from-gray-800 hover:to-gray-700 hover:shadow-lg hover:scale-105 col-span-1">
                   <div className="flex items-start space-x-3">
                     <span className="text-2xl">🚀</span>
                     <div>
@@ -181,6 +181,18 @@ const Join = () => {
                     </div>
                   </div>
                 </div>
+                
+                {/* New Card */}
+                <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-6 rounded-xl flex transition-all duration-300 hover:from-gray-800 hover:to-gray-700 hover:shadow-lg hover:scale-105 col-span-1">
+                  <div className="flex items-start space-x-3">
+                    <span className="text-2xl">🌟</span> {/* Placeholder icon */}
+                    <div>
+                      <h3 className="font-bold mb-2 gradient-text">Exclusive Updates</h3> {/* Placeholder title */}
+                      <p className="text-gray-300 text-sm">Stay informed with the latest news and developments about Plamento.</p> {/* Placeholder description */}
+                    </div>
+                  </div>
+                </div>
+
 
               </div>
             </div>
