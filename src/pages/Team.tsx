@@ -6,6 +6,7 @@ import mentorPhoto from '/src/assets/mentor.jpeg';
 const malaiarasuPhoto = '/lovable-uploads/5c6496f4-6bda-4ac1-98ec-7635d763724a.png';
 const rahulPhoto = '/lovable-uploads/9f3ce78d-1dcb-428a-b14d-66b6ca236c9a.png';
 const rohanPhoto = '/lovable-uploads/36f2af4e-d789-46bb-b6ab-d5cc7baf4760.png';
+import muraliSirPhoto from '/src/assets/murali-sir.jpeg';
 
 const Team = () => {
   const coreTeam = [
@@ -38,7 +39,7 @@ const Team = () => {
   };
 
   const advisors = [
-    { name: "[Advisor 1]", support: "Career Readiness / Industry Mentorship" },
+    { name: "Mr. Murali Dharan Rajasekar", designation: "Director - CONNECT Training Solutions (P) Ltd.", support: "Career Readiness", photo: muraliSirPhoto },
     { name: "[Advisor 2]", support: "AI / NLP" }
   ];
 
@@ -133,31 +134,36 @@ const Team = () => {
 
           {/* Advisors */}
           <div className="text-center">
-            <h2 className="text-2xl font-semibold mb-4">💡 Industry Advisors</h2>
+            <h2 className="text-3xl font-semibold mb-6">💡 Industry Advisors</h2>
             <div className="flex flex-col md:flex-row justify-center items-center gap-8">
               {advisors.map((advisor, index) => (
                 <div
                   key={index}
-                  className="bg-gray-800 text-white rounded-lg shadow-lg p-6 text-center flex flex-col items-center transition-transform transform hover:scale-105 hover:shadow-xl duration-300 w-64 h-72"
+                  className="bg-gray-800 text-white rounded-lg shadow-lg p-6 text-center flex flex-col items-center transition-transform transform hover:scale-105 hover:shadow-xl duration-300 w-80 h-80"
                 >
                   <div className="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-primary">
-                    <div className="w-full h-full bg-gray-600 flex items-center justify-center text-white">
-                      No Photo
-                    </div>
+                    {advisor.photo ? (
+                      <img src={advisor.photo} alt={advisor.name} className="w-full h-full object-cover" />
+                    ) : (
+                      <div className="w-full h-full bg-gray-600 flex items-center justify-center text-white">
+                        No Photo
+                      </div>
+                    )}
                   </div>
                   <div className="text-center">
-                    <p className="text-lg font-semibold mb-2">{advisor.name}</p>
-                    <p className="text-sm text-muted-foreground">
+                    <h3 className="text-lg font-semibold mb-2">{advisor.name}</h3>
+                    <p className="text-sm text-gray-400 mb-2">{advisor.designation}</p>
+                    <p className="text-sm text-gray-400">
                       <span className="font-semibold">Area of Support:</span> {advisor.support}
                     </p>
                   </div>
                 </div>
               ))}
             </div>
-          </div> {/* Close Advisors section */}
-        </div> {/* Close max-w-6xl div */}
+          </div>
+        </div>
       </div>
-      <Footer /> {/* Footer is now outside the main content div */}
+      <Footer />
     </div>
   );
 };
