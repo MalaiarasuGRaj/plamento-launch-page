@@ -8,20 +8,20 @@ import {
 const FAQSection = () => {
   const faqItems = [
     {
+      question: "What is this platform all about?",
+      answer: "Our platform is an AI-powered placement preparation tool that helps students get job-ready with resume checks, mock interviews, JD analyzers, and domain-specific question banks — all in one place.",
+    },
+    {
       question: "What kind of questions does the AI ask?",
-      answer: "Our AI is trained on a vast dataset of interview questions across various roles and industries, including behavioral, technical, and situational questions. Questions are tailored to your profile.",
+      answer: "The AI generates behavioral, technical, and situational questions tailored to your resume, selected job role, and job description. It adapts to your profile for a realistic mock interview experience.",
     },
     {
-      question: "How accurate is the AI feedback?",
-      answer: "The AI uses natural language processing (NLP) and machine learning to analyze your responses, tone, and pace. It provides detailed feedback on content, clarity, confidence, and areas for improvement.",
+      question: "Can I target specific companies or roles?",
+      answer: "Yes! You can upload a job description or specify a company/role, and the system will tailor your interview questions and resume comparison accordingly.",
     },
     {
-      question: "Can I practice for specific companies or roles?",
-      answer: "Yes, you can customize your mock interviews to focus on specific companies or job roles by providing relevant keywords and job descriptions.",
-    },
-    {
-      question: "Is my data private and secure?",
-      answer: "We take data privacy seriously. All your practice sessions and personal information are securely stored and kept confidential.",
+      question: "What is an ATS Resume Checker?",
+      answer: "It scans your resume the same way a recruiter’s Applicant Tracking System would — checking format, keywords, and relevance to improve your chances of being shortlisted.",
     },
   ];
 
