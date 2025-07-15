@@ -55,7 +55,7 @@ const Team = () => {
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               To democratize interview preparation with AI tools that are smart, personalized,
-              and accessible to every student — no matter their background or experience.
+              and accessible to every individual — no matter their background or experience.
             </p>
           </div>
 

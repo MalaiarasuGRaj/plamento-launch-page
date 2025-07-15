@@ -157,7 +157,7 @@ const Join = () => {
                     <span className="text-2xl">💡</span>
                     <div>
                       <h3 className="font-bold mb-2 gradient-text">Influence the Product</h3>
-                      <p className="text-gray-300 text-sm">Share feedback and help us shape features to better suit student needs.</p>
+                      <p className="text-gray-300 text-sm">Share feedback and help us shape features to better suit user needs.</p>
                     </div>
                   </div>
                 </div>
