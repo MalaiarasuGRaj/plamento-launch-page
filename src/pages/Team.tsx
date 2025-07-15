@@ -154,11 +154,10 @@ const Team = () => {
                 </div>
               ))}
             </div>
-          </div>
-
-          <Footer />
-        </div>
+          </div> {/* Close Advisors section */}
+        </div> {/* Close max-w-6xl div */}
       </div>
+      <Footer /> {/* Footer is now outside the main content div */}
     </div>
   );
 };
