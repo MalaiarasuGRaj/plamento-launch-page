@@ -14,8 +14,8 @@ const About = () => {
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               About <span className="gradient-text">Plamento</span>
             </h1>
-            <p className="text-xl text-muted-foreground">
-              Your smart AI-powered companion for cracking placement interviews
+            <p className="text-gray-300 text-xl">
+            Your smart AI-powered companion for cracking job interviews
             </p>
           </div>
 
