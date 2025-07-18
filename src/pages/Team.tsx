@@ -62,7 +62,7 @@ const Team = () => {
 
           {/* Core Team */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-semibold mb-6">💼 Our Core Team</h2>
+            <h2 className="text-3xl font-semibold mb-6">Our Core Team</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {coreTeam.map((member, index) => (
                 <div
@@ -108,7 +108,7 @@ const Team = () => {
 
           {/* Mentor */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-semibold mb-6">🎓 Our Mentor</h2>
+            <h2 className="text-3xl font-semibold mb-6">Our Mentor</h2>
             <div className="bg-gray-800 text-white rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 transition-transform transform hover:scale-105 hover:shadow-xl duration-300 mx-auto w-full md:w-2/3 lg:w-1/2">
               <div className="w-32 h-32 rounded-lg overflow-hidden border-4 border-primary flex-shrink-0">
                 <img src={mentorPhoto} alt="Mentor Photo" className="w-full h-full object-cover" />
@@ -134,7 +134,7 @@ const Team = () => {
 
           {/* Advisors */}
           <div className="text-center">
-            <h2 className="text-3xl font-semibold mb-6">💡 Industry Advisors</h2>
+            <h2 className="text-3xl font-semibold mb-6">Industry Advisors</h2>
             <div className="flex flex-col md:flex-row justify-center items-center gap-8">
               {advisors.map((advisor, index) => (
                 <div
