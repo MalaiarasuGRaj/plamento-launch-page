@@ -9,7 +9,7 @@ const FAQSection = () => {
   const faqItems = [
     {
       question: "What is this platform all about?",
-      answer: "Our platform is an AI-powered placement preparation tool that helps students get job-ready with resume checks, mock interviews, JD analyzers, and domain-specific question banks — all in one place.",
+      answer: "Our platform is an AI-powered interview and career preparation tool that helps students and professionals become job-ready through smart resume checks, mock interviews, job description analyzers, and personalized domain-specific skill assessments - all in one place.",
     },
     {
       question: "What kind of questions does the AI ask?",
