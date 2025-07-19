@@ -3,9 +3,9 @@ import Footer from '@/components/Footer';
 
 // Import team member photos
 import mentorPhoto from '/src/assets/mentor.jpeg';
-const malaiarasuPhoto = '/lovable-uploads/5c6496f4-6bda-4ac1-98ec-7635d763724a.png';
-const rahulPhoto = '/lovable-uploads/9f3ce78d-1dcb-428a-b14d-66b6ca236c9a.png';
-const rohanPhoto = '/lovable-uploads/36f2af4e-d789-46bb-b6ab-d5cc7baf4760.png';
+import malaiarasuPhoto from '/src/assets/malaiarasu.png';
+import rahulPhoto from '/src/assets/rahul.png';
+import rohanPhoto from '/src/assets/rohan.png';
 import muraliSirPhoto from '/src/assets/murali-sir.jpeg';
 
 const Team = () => {
