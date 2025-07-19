@@ -3,13 +3,47 @@ import Footer from '@/components/Footer';
 import resumeChecker from '../assets/resumechecker.png';
 import problem from '../assets/ai-collaboration.jpg';
 import jobAnalyzer from '../assets/jobanalyzer.png';
+import {
+  FileText,
+  Search,
+  BookOpen,
+  Mic,
+  LucideIcon,
+} from 'lucide-react';
 
 const About = () => {
+  const tools: { title: string; description: string; icon: LucideIcon }[] = [
+    {
+      title: 'ATS Resume Checker',
+      description:
+        'Ensure your resume passes real-world ATS filters with proper keywords and format.',
+      icon: FileText,
+    },
+    {
+      title: 'Job Description Analyzer',
+      description:
+        'Upload a JD and instantly compare your resume against it with actionable insights.',
+      icon: Search,
+    },
+    {
+      title: 'Skill-Based Assessment',
+      description:
+        'Take AI-generated tests with questions tailored to your skills and job role - for targeted, real-world interview preparation.',
+      icon: BookOpen,
+    },
+    {
+      title: 'AI-Powered Mock Interview',
+      description:
+        'Practice with HR and technical questions. Get instant NLP-based feedback and confidence scoring.',
+      icon: Mic,
+    },
+  ];
+
   return (
     <div className="min-h-screen">
       <Navigation />{' '}
       <div className="min-h-screen pt-20">
-        <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-4xl px-4 pb-8 pt-16 sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
             <h1 className="mb-6 text-4xl font-bold md:text-5xl">
               About <span className="gradient-text">Plamento</span>
@@ -65,7 +99,7 @@ const About = () => {
                   </h2>
                   <p className="text-base text-gray-300">
                     We are building a smart AI-powered companion for every
-                    candidates preparing for placements.
+                    candidate preparing for placements.
                     <br />
                     <br />
                     Our vision is to bridge the gap between job seekers and job
@@ -77,49 +111,32 @@ const About = () => {
               </div>
             </div>
 
-            <div className="mb-12 text-center">
-              <h2 className="mb-8 text-2xl font-semibold">
+            <div className="border-t border-gray-700 pt-16 text-center">
+              <h2 className="mb-8 text-3xl font-bold">
                 <span className="gradient-text">Our Toolkit Includes</span>
               </h2>
-              <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-                {/* Tool 1 */}
-                <div className="flex transform flex-col items-center rounded-lg bg-gray-800 p-6 text-center text-white shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl">
-                  <h3 className="mb-2 text-lg font-bold">ATS Resume Checker</h3>
-                  <p className="text-sm text-gray-300">
-                    Ensure your resume passes real-world ATS filters with proper
-                    keywords and format.
-                  </p>
-                </div>
-                {/* Tool 2 */}
-                <div className="flex transform flex-col items-center rounded-lg bg-gray-800 p-6 text-center text-white shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl">
-                  <h3 className="mb-2 text-lg font-bold">
-                    Job Description Analyzer
-                  </h3>
-                  <p className="text-sm text-gray-300">
-                    Upload a JD and instantly compare your resume against it
-                    with actionable insights.
-                  </p>
-                </div>
-                {/* Tool 3 */}
-                <div className="flex transform flex-col items-center rounded-lg bg-gray-800 p-6 text-center text-white shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl">
-                  <h3 className="mb-2 text-lg font-bold">
-                    Domain-Specific Question Bank
-                  </h3>
-                  <p className="text-sm text-gray-300">
-                    Access MCQs and quizzes tailored to your job role for
-                    focused preparation.
-                  </p>
-                </div>
-                {/* Tool 4 */}
-                <div className="flex transform flex-col items-center rounded-lg bg-gray-800 p-6 text-center text-white shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl">
-                  <h3 className="mb-2 text-lg font-bold">
-                    AI-Powered Mock Interview
-                  </h3>
-                  <p className="text-sm text-gray-300">
-                    Practice with HR and technical questions. Get instant
-                    NLP-based feedback and confidence scoring.
-                  </p>
-                </div>
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+                {tools.map((tool, index) => (
+                  <div
+                    key={index}
+                    className="group relative flex transform flex-col rounded-xl border border-gray-700 bg-gray-800/80 p-6 text-white shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/30"
+                  >
+                    <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary/10 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+                    <div className="relative z-10">
+                      <div className="mb-4 flex items-center gap-4">
+                        <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-gray-700">
+                          <tool.icon className="h-6 w-6 text-primary" />
+                        </div>
+                        <h3 className="text-xl font-bold text-gray-100">
+                          {tool.title}
+                        </h3>
+                      </div>
+                      <p className="text-base text-gray-400">
+                        {tool.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
