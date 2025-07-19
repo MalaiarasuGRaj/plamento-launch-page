@@ -56,10 +56,10 @@ const About = () => {
                     <span className="gradient-text">Our Vision</span>
                   </h2>
                   <p className="text-gray-300 text-base">
-                    We are building a smart AI-powered companion for every student preparing for placements.
+                    We are building a smart AI-powered companion for every candidates preparing for placements.
                     <br /><br />
                     Our vision is to bridge the gap between job seekers and job roles using intelligent tools
-                    that simulate real-world hiring challenges-making students not just eligible, but truly employable.
+                    that simulate real-world hiring challenges-making them not just eligible, but truly employable.
                   </p>
                 </div>
               </div>
