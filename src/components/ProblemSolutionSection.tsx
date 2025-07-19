@@ -11,7 +11,7 @@ const ProblemSolutionSection: React.FC = () => {
               The <span className="gradient-text">Problem</span>
             </h2>
             <p className="text-lg text-gray-300 leading-relaxed">
-              Traditional interview preparation often lacks personalization and real-time feedback. Students
+              Traditional interview preparation often lacks personalization and real-time feedback. Candidates
               struggle with generic practice questions, don't get specific guidance on their weaknesses,
               and find it hard to simulate real interview pressure. This leaves them feeling unprepared and
               anxious, often leading to missed opportunities.
