@@ -86,16 +86,16 @@ const About = () => {
                 </div>
                 {/* Tool 3 */}
                 <div className="bg-gray-800 text-white rounded-lg shadow-lg p-6 text-center flex flex-col items-center transition-transform transform hover:scale-105 hover:shadow-xl duration-300">
-                  <h3 className="text-lg font-bold mb-2">AI-Powered Mock Interview</h3>
+                  <h3 className="text-lg font-bold mb-2">Domain-Specific Question Bank</h3>
                   <p className="text-gray-300 text-sm">
-                    Practice with HR and technical questions. Get instant NLP-based feedback and confidence scoring.
+                    Access MCQs and quizzes tailored to your job role for focused preparation.
                   </p>
                 </div>
                 {/* Tool 4 */}
                 <div className="bg-gray-800 text-white rounded-lg shadow-lg p-6 text-center flex flex-col items-center transition-transform transform hover:scale-105 hover:shadow-xl duration-300">
-                  <h3 className="text-lg font-bold mb-2">Domain-Specific Question Bank</h3>
+                  <h3 className="text-lg font-bold mb-2">AI-Powered Mock Interview</h3>
                   <p className="text-gray-300 text-sm">
-                    Access MCQs and quizzes tailored to your job role for focused preparation.
+                    Practice with HR and technical questions. Get instant NLP-based feedback and confidence scoring.                    
                   </p>
                 </div>
               </div>
