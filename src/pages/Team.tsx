@@ -39,7 +39,7 @@ const Team = () => {
   };
 
   const advisors = [
-    { name: "Mr. Murali Dharan Rajasekar", designation: "Director - CONNECT Training Solutions (P) Ltd.", support: "Career Readiness", photo: muraliSirPhoto },
+    { name: "Mr. Murali Dharan Rajasekar", designation: "Director - CONNECT Training Solutions (P) Ltd.", support: "Career Readiness", photo: muraliSirPhoto, linkedin: "https://www.linkedin.com/in/connectmurali/" },
     { name: "[Advisor 2]", support: "AI / NLP" }
   ];
 
@@ -156,6 +156,16 @@ const Team = () => {
                     <p className="text-sm text-gray-400">
                       <span className="font-semibold">Area of Support:</span> {advisor.support}
                     </p>
+                    {advisor.linkedin && (
+                      <a
+                        href={advisor.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-500 hover:text-blue-600 transition-colors underline"
+                      >
+                        LinkedIn
+                      </a>
+                    )}
                   </div>
                 </div>
               ))}
