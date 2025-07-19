@@ -57,10 +57,12 @@ const Join = () => {
       }
 
       if (existingUser) {
+        setIsSubmitted(true);
         toast({
           title: "You're already in! 🎉",
           description: "This email is already on our waitlist.",
         });
+        reset()
         setIsLoading(false);
         return;
       }
