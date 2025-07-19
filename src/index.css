@@ -52,12 +52,24 @@ input:-webkit-autofill:active {
 
     /* AI/Tech Gradients */
     --gradient-primary: hsl(var(--primary));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.1), hsl(var(--accent) / 0.05));
-    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted) / 0.3));
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(var(--primary) / 0.1),
+      hsl(var(--accent) / 0.05)
+    );
+    --gradient-card: linear-gradient(
+      145deg,
+      hsl(var(--card)),
+      hsl(var(--muted) / 0.3)
+    );
 
     /* Modern Shadows */
-    --shadow-soft: 0 4px 6px -1px hsl(var(--primary) / 0.1), 0 2px 4px -1px hsl(var(--primary) / 0.06);
-    --shadow-medium: 0 10px 15px -3px hsl(var(--primary) / 0.1), 0 4px 6px -2px hsl(var(--primary) / 0.05);
+    --shadow-soft:
+      0 4px 6px -1px hsl(var(--primary) / 0.1),
+      0 2px 4px -1px hsl(var(--primary) / 0.06);
+    --shadow-medium:
+      0 10px 15px -3px hsl(var(--primary) / 0.1),
+      0 4px 6px -2px hsl(var(--primary) / 0.05);
     --shadow-glow: 0 0 40px hsl(var(--primary) / 0.3);
 
     /* Smooth Animations */
@@ -126,50 +138,60 @@ input:-webkit-autofill:active {
   }
 
   body {
-    @apply bg-background text-foreground font-sans p-0 m-0 bg-black;
-  } 
+    @apply m-0 bg-background bg-black p-0 font-sans text-foreground;
+  }
 }
 
 @layer components {
   /* Hero Button Variants */
   .btn-hero {
-    @apply bg-gradient-to-r from-primary to-accent text-primary-foreground px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:scale-105 hover:shadow-glow;
+    @apply rounded-xl bg-gradient-to-r from-primary to-accent px-8 py-4 font-semibold text-primary-foreground transition-all duration-300 hover:scale-105 hover:shadow-glow hover:shadow-lg;
   }
 
   .btn-ghost {
-    @apply text-primary hover:bg-primary/10 px-6 py-3 rounded-lg font-medium transition-all duration-300;
+    @apply rounded-lg px-6 py-3 font-medium text-primary transition-all duration-300 hover:bg-primary/10;
   }
 
   /* Feature Card Styles */
   .feature-card {
     /* Changed background for dark mode */
- @apply bg-gradient-to-br from-card to-muted/30 p-6 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 border border-border/50 flex flex-col justify-center text-center dark:bg-[#1a1a1a];
+    @apply flex flex-col justify-center rounded-2xl border border-border/50 bg-gradient-to-br from-card to-muted/30 p-6 text-center shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-medium dark:bg-[#1a1a1a];
   }
 
   /* Feature Square Styles */
   .feature-square {
-    @apply bg-white p-8 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-2 border-2 border-light-blue aspect-square flex flex-col justify-center text-center;
+    @apply flex aspect-square flex-col justify-center rounded-2xl border-2 border-light-blue bg-white p-8 text-center shadow-soft transition-all duration-300 hover:-translate-y-2 hover:shadow-medium;
   }
 
   /* Animated Underline for Navigation */
   .nav-link {
-    @apply relative text-foreground/80 hover:text-foreground transition-colors duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
+    @apply relative text-foreground/80 transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-right after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 after:content-[''] hover:text-foreground hover:after:origin-bottom-left hover:after:scale-x-100;
   }
 
   /* Scroll Animations */
   .fade-in-up {
-    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+    @apply translate-y-8 opacity-0 transition-all duration-700 ease-out;
   }
 
   .fade-in-up.animate {
-    @apply opacity-100 translate-y-0;
+    @apply translate-y-0 opacity-100;
   }
 
-  .stagger-1 { animation-delay: 0.1s; }
-  .stagger-2 { animation-delay: 0.2s; }
-  .stagger-3 { animation-delay: 0.3s; }
-  .stagger-4 { animation-delay: 0.4s; }
-  .stagger-5 { animation-delay: 0.5s; }
+  .stagger-1 {
+    animation-delay: 0.1s;
+  }
+  .stagger-2 {
+    animation-delay: 0.2s;
+  }
+  .stagger-3 {
+    animation-delay: 0.3s;
+  }
+  .stagger-4 {
+    animation-delay: 0.4s;
+  }
+  .stagger-5 {
+    animation-delay: 0.5s;
+  }
 
   /* Gradient Text */
   .gradient-text {

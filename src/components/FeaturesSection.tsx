@@ -9,36 +9,41 @@ const FeaturesSection = () => {
     {
       icon: Users,
       title: 'Personalized Interview Questions',
-      description: 'Get tailored questions based on your role, experience level, and industry.',
-      delay: 'stagger-1'
+      description:
+        'Get tailored questions based on your role, experience level, and industry.',
+      delay: 'stagger-1',
     },
     {
       icon: Monitor,
       title: 'Real-Time Feedback & Scoring',
-      description: 'Instant analysis of your responses with detailed performance metrics.',
-      delay: 'stagger-2'
+      description:
+        'Instant analysis of your responses with detailed performance metrics.',
+      delay: 'stagger-2',
     },
     {
       icon: Mic,
       title: 'Performance Tracking',
-      description: 'Track your progress over time and identify areas for improvement.',
-      delay: 'stagger-3'
-    }
+      description:
+        'Track your progress over time and identify areas for improvement.',
+      delay: 'stagger-3',
+    },
   ];
 
   const bottomRowFeatures = [
     {
       icon: Mic,
       title: 'Voice + Text Mode Support',
-      description: 'Practice with both voice and text responses for maximum flexibility.',
-      delay: 'stagger-4'
+      description:
+        'Practice with both voice and text responses for maximum flexibility.',
+      delay: 'stagger-4',
     },
     {
       icon: ImageIcon,
       title: 'Available Worldwide',
-      description: 'Access your AI interview coach from anywhere, anytime, on any device.',
-      delay: 'stagger-5'
-    }
+      description:
+        'Access your AI interview coach from anywhere, anytime, on any device.',
+      delay: 'stagger-5',
+    },
   ];
 
   useEffect(() => {
@@ -48,7 +53,7 @@ const FeaturesSection = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (sectionRef.current) {
@@ -59,43 +64,45 @@ const FeaturesSection = () => {
   }, []);
 
   return (
-    <section 
-      ref={sectionRef}
-      className="py-20"
-      id="features"
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section ref={sectionRef} className="py-20" id="features">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className={`text-3xl md:text-4xl font-bold mb-4 fade-in-up ${isVisible ? 'animate' : ''}`}>
-            Why Choose{' '}
-            <span className="gradient-text">Plamento</span>?
+        <div className="mb-16 text-center">
+          <h2
+            className={`fade-in-up mb-4 text-3xl font-bold md:text-4xl ${isVisible ? 'animate' : ''}`}
+          >
+            Why Choose <span className="gradient-text">Plamento</span>?
           </h2>
-          <p className={`text-lg text-muted-foreground dark:text-gray-400 max-w-3xl mx-auto fade-in-up ${isVisible ? 'animate' : ''} stagger-1`}>
-            Our AI-powered platform provides comprehensive interview preparation with cutting-edge technology 
-            and personalized feedback to help you succeed.
+          <p
+            className={`fade-in-up mx-auto max-w-3xl text-lg text-muted-foreground dark:text-gray-400 ${isVisible ? 'animate' : ''} stagger-1`}
+          >
+            Our AI-powered platform provides comprehensive interview preparation
+            with cutting-edge technology and personalized feedback to help you
+            succeed.
           </p>
         </div>
 
         {/* Features Grid - 3 cards in top row */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
+        <div className="mx-auto mb-12 grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-3">
           {topRowFeatures.map((feature, index) => {
             const IconComponent = feature.icon;
             return (
               <div
                 key={index}
-                className={`bg-gray-800 text-white rounded-lg shadow-lg p-6 text-center flex flex-col items-center hover:shadow-medium transition-all duration-300 hover:-translate-y-1 fade-in-up ${isVisible ? 'animate' : ''} ${feature.delay} w-full h-[280px] max-w-[320px] mx-auto`}
+                className={`fade-in-up flex flex-col items-center rounded-lg bg-gray-800 p-6 text-center text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-medium ${isVisible ? 'animate' : ''} ${feature.delay} mx-auto h-[280px] w-full max-w-[320px]`}
               >
                 <div className="mb-6">
-                  <div className="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center">
-                    <IconComponent className="w-8 h-8 text-white" />
+                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-accent">
+                    <IconComponent className="h-8 w-8 text-white" />
                   </div>
                 </div>
-                <h3 className="text-xl font-bold mb-4 gradient-text">
-                  {feature.title} {/* Consider making this white as well if needed */}
+                <h3 className="gradient-text mb-4 text-xl font-bold">
+                  {feature.title}{' '}
+                  {/* Consider making this white as well if needed */}
                 </h3>
-                <p className="text-gray-300 text-sm">
-                  {feature.description} {/* Consider making this a lighter grey as well if needed */}
+                <p className="text-sm text-gray-300">
+                  {feature.description}{' '}
+                  {/* Consider making this a lighter grey as well if needed */}
                 </p>
               </div>
             );
@@ -103,25 +110,27 @@ const FeaturesSection = () => {
         </div>
 
         {/* Features Grid - 2 cards in bottom row, centered */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          <div className="col-start-1 col-end-4 grid grid-cols-1 md:grid-cols-2 gap-8 md:max-w-[calc(320px*2+32px)] mx-auto">
+        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-3">
+          <div className="col-start-1 col-end-4 mx-auto grid grid-cols-1 gap-8 md:max-w-[calc(320px*2+32px)] md:grid-cols-2">
             {bottomRowFeatures.map((feature, index) => {
               const IconComponent = feature.icon;
               return (
                 <div
                   key={index}
-                  className={`bg-gray-800 text-white rounded-lg shadow-lg p-6 text-center flex flex-col items-center hover:shadow-medium transition-all duration-300 hover:-translate-y-1 fade-in-up ${isVisible ? 'animate' : ''} ${feature.delay} w-full h-[280px] max-w-[320px] mx-auto`}
+                  className={`fade-in-up flex flex-col items-center rounded-lg bg-gray-800 p-6 text-center text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-medium ${isVisible ? 'animate' : ''} ${feature.delay} mx-auto h-[280px] w-full max-w-[320px]`}
                 >
                   <div className="mb-6">
-                    <div className="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center">
-                      <IconComponent className="w-8 h-8 text-white" />
+                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-accent">
+                      <IconComponent className="h-8 w-8 text-white" />
                     </div>
                   </div>
-                <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">
-                    <span className="gradient-text">{feature.title}</span> {/* Consider making this white as well if needed */}
+                  <h3 className="mb-4 text-xl font-bold text-gray-900 dark:text-white">
+                    <span className="gradient-text">{feature.title}</span>{' '}
+                    {/* Consider making this white as well if needed */}
                   </h3>
-                  <p className="text-gray-300 text-sm">
-                    {feature.description} {/* Consider making this a lighter grey as well if needed */}
+                  <p className="text-sm text-gray-300">
+                    {feature.description}{' '}
+                    {/* Consider making this a lighter grey as well if needed */}
                   </p>
                 </div>
               );

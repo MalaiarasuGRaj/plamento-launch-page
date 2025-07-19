@@ -10,19 +10,19 @@ const Navigation = () => {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Team', href: '/team' },
-    { name: 'Join', href: '/join' }
+    { name: 'Join', href: '/join' },
   ];
 
   const isActive = (href: string) => location.pathname === href;
 
   return (
-    <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md z-50 border-b border-border/50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+    <nav className="fixed top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-md">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/">
-              <h1 className="text-2xl font-bold gradient-text">Plamento</h1>
+              <h1 className="gradient-text text-2xl font-bold">Plamento</h1>
             </Link>
           </div>
 
@@ -47,7 +47,7 @@ const Navigation = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-foreground hover:text-primary hover:bg-muted focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
+              className="inline-flex items-center justify-center rounded-md p-2 text-foreground hover:bg-muted hover:text-primary focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
             >
               {isMenuOpen ? (
                 <X className="block h-6 w-6" />
@@ -62,14 +62,14 @@ const Navigation = () => {
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-background border-b border-border">
+          <div className="space-y-1 border-b border-border bg-background px-2 pb-3 pt-2 sm:px-3">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
-                  isActive(item.href) 
-                    ? 'text-primary bg-primary/10' 
+                className={`block rounded-md px-3 py-2 text-base font-medium transition-colors duration-200 ${
+                  isActive(item.href)
+                    ? 'bg-primary/10 text-primary'
                     : 'text-foreground hover:text-primary'
                 }`}
                 onClick={() => setIsMenuOpen(false)}

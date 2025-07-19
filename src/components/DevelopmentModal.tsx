@@ -13,25 +13,32 @@ interface DevelopmentModalProps {
   isWaitlistMessage?: boolean;
 }
 
-const DevelopmentModal = ({ isOpen, onClose, isWaitlistMessage }: DevelopmentModalProps) => {
+const DevelopmentModal = ({
+  isOpen,
+  onClose,
+  isWaitlistMessage,
+}: DevelopmentModalProps) => {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
           <DialogTitle className="text-center text-xl font-semibold">
-            {isWaitlistMessage ? "Join Waitlist" : "🛠️ Product Under Development"}
+            {isWaitlistMessage
+              ? 'Join Waitlist'
+              : '🛠️ Product Under Development'}
           </DialogTitle>
         </DialogHeader>
-        
-        <div className="text-center py-4">
+
+        <div className="py-4 text-center">
           {isWaitlistMessage ? (
             <p className="text-muted-foreground">
-              Join the waitlist, we will onboard you when the product is available for public use.
+              Join the waitlist, we will onboard you when the product is
+              available for public use.
             </p>
           ) : (
-          <p className="text-muted-foreground">
-            We're working hard to bring this feature to life. Stay tuned!
-          </p>
+            <p className="text-muted-foreground">
+              We're working hard to bring this feature to life. Stay tuned!
+            </p>
           )}
         </div>
 
@@ -40,10 +47,14 @@ const DevelopmentModal = ({ isOpen, onClose, isWaitlistMessage }: DevelopmentMod
             Close
           </Button>
           {isWaitlistMessage && (
-            <Button onClick={() => {
-              window.location.href = '/join';
-              onClose();
-            }}>Join Waitlist</Button>
+            <Button
+              onClick={() => {
+                window.location.href = '/join';
+                onClose();
+              }}
+            >
+              Join Waitlist
+            </Button>
           )}
         </div>
       </DialogContent>

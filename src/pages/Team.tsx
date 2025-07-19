@@ -11,83 +11,95 @@ import muraliSirPhoto from '/src/assets/murali-sir.jpeg';
 const Team = () => {
   const coreTeam = [
     {
-      name: "Malaiarasu G Raj",
-      role: "Founder & Developer",
+      name: 'Malaiarasu G Raj',
+      role: 'Founder & Developer',
       photo: malaiarasuPhoto,
-      linkedin: "https://www.linkedin.com/in/mgraj/",
-      portfolio: "https://mgraj-portfolio.lovable.app/"
+      linkedin: 'https://www.linkedin.com/in/mgraj/',
+      portfolio: 'https://mgraj-portfolio.lovable.app/',
     },
     {
-      name: "Rohan S",
-      role: "UI/UX Designer",
+      name: 'Rohan S',
+      role: 'UI/UX Designer',
       photo: rohanPhoto,
-      linkedin: "https://www.linkedin.com/in/rohan-s-34a631285/"
+      linkedin: 'https://www.linkedin.com/in/rohan-s-34a631285/',
     },
     {
-      name: "Rahul Raja P",
-      role: "Backend & AI Lead",
+      name: 'Rahul Raja P',
+      role: 'Backend & AI Lead',
       photo: rahulPhoto,
-      linkedin: "https://www.linkedin.com/in/rahul-raja-p-124639252/"
-    }
+      linkedin: 'https://www.linkedin.com/in/rahul-raja-p-124639252/',
+    },
   ];
 
   const mentor = {
-    name: "Mr.A.Shenbagharaman",
-    role: "Faculty Guide",
-    affiliation: "Department of AI & DS, National Engineering College",
-    vidwan: "https://vidwan.inflibnet.ac.in/profile/252862"
+    name: 'Mr.A.Shenbagharaman',
+    role: 'Faculty Guide',
+    affiliation: 'Department of AI & DS, National Engineering College',
+    vidwan: 'https://vidwan.inflibnet.ac.in/profile/252862',
   };
 
   const advisors = [
-    { name: "Mr. Murali Dharan Rajasekar", designation: "Director - CONNECT Training Solutions (P) Ltd.", support: "Career Readiness", photo: muraliSirPhoto, linkedin: "https://www.linkedin.com/in/connectmurali/" },
-    { name: "[Advisor 2]", support: "AI / NLP" }
+    {
+      name: 'Mr. Murali Dharan Rajasekar',
+      designation: 'Director - CONNECT Training Solutions (P) Ltd.',
+      support: 'Career Readiness',
+      photo: muraliSirPhoto,
+      linkedin: 'https://www.linkedin.com/in/connectmurali/',
+    },
+    {
+      name: 'Future Advisor',
+      designation: 'Expert in AI/NLP',
+      support: 'AI / NLP',
+      photo: '',
+      linkedin: '',
+    },
   ];
 
   return (
     <div className="min-h-screen">
       <Navigation />
       <div className="pt-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-
+        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
           {/* Mission */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          <div className="mb-16 text-center">
+            <h1 className="mb-6 text-4xl font-bold md:text-5xl">
               Our <span className="gradient-text">Mission</span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              To democratize interview preparation with AI tools that are smart, personalized,
-              and accessible to every individual — no matter their background or experience.
+            <p className="mx-auto max-w-3xl text-xl text-muted-foreground">
+              To democratize interview preparation with AI tools that are smart,
+              personalized, and accessible to every individual — no matter their
+              background or experience.
             </p>
           </div>
 
           {/* Core Team */}
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-semibold mb-6">Our Core Team</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="mb-12 text-center">
+            <h2 className="mb-6 text-3xl font-semibold">Our Core Team</h2>
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
               {coreTeam.map((member, index) => (
                 <div
                   key={index}
-                  className="bg-gray-800 text-white rounded-lg shadow-lg p-6 text-center flex flex-col items-center transition-transform transform hover:scale-105 hover:shadow-xl duration-300"
+                  className="flex transform flex-col items-center rounded-lg bg-gray-800 p-6 text-center text-white shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl"
                 >
-                  <div className="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-primary">
+                  <div className="mb-4 h-32 w-32 overflow-hidden rounded-full border-4 border-primary">
                     <img
                       src={member.photo}
-                      alt={member.name}
-                      className="w-full h-full object-cover"
+                      alt={`${member.name}'s photo`}
+                      className="h-full w-full object-cover"
                     />
                   </div>
                   <h3 className="text-lg font-semibold">{member.name}</h3>
                   <p className="text-sm text-muted-foreground">{member.role}</p>
-                  <div className="flex justify-center gap-4 mt-2 w-full">
+                  <div className="mt-2 flex w-full justify-center gap-4">
                     <a
                       href={member.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-500 hover:text-blue-600 transition-colors underline"
+                      className="text-blue-500 underline transition-colors hover:text-blue-600"
                     >
                       LinkedIn
                     </a>
-                    {member.name === "Malaiarasu G Raj" && (
+                    {member.name === 'Malaiarasu G Raj' && (
                       <a
                         href={member.portfolio}
                         target="_blank"
@@ -104,19 +116,27 @@ const Team = () => {
           </div>
 
           {/* Divider */}
-          <div className="border-b border-gray-700 w-full max-w-4xl mx-auto my-12"></div>
+          <div className="mx-auto my-12 w-full max-w-4xl border-b border-gray-700"></div>
 
           {/* Mentor */}
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-semibold mb-6">Our Mentor</h2>
-            <div className="bg-gray-800 text-white rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 transition-transform transform hover:scale-105 hover:shadow-xl duration-300 mx-auto w-full md:w-2/3 lg:w-1/2">
-              <div className="w-32 h-32 rounded-lg overflow-hidden border-4 border-primary flex-shrink-0">
-                <img src={mentorPhoto} alt="Mentor Photo" className="w-full h-full object-cover" />
+          <div className="mb-12 text-center">
+            <h2 className="mb-6 text-3xl font-semibold">Our Mentor</h2>
+            <div className="mx-auto flex w-full transform flex-col items-center justify-center space-y-4 rounded-lg bg-gray-800 p-6 text-white shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl md:w-2/3 md:flex-row md:space-x-8 md:space-y-0 lg:w-1/2">
+              <div className="h-32 w-32 flex-shrink-0 overflow-hidden rounded-lg border-4 border-primary">
+                <img
+                  src={mentorPhoto}
+                  alt="Mr.A.Shenbagharaman's photo"
+                  className="h-full w-full object-cover"
+                />
               </div>
-              <div className="flex flex-col items-center md:items-start text-center md:text-left">
-                <p className="text-xl font-medium mb-1">{mentor.name}</p>
-                <p className="text-md text-muted-foreground mb-1">{mentor.role}</p>
-                <p className="text-md text-muted-foreground mb-2">{mentor.affiliation}</p>
+              <div className="flex flex-col items-center text-center md:items-start md:text-left">
+                <p className="mb-1 text-xl font-medium">{mentor.name}</p>
+                <p className="text-md mb-1 text-muted-foreground">
+                  {mentor.role}
+                </p>
+                <p className="text-md mb-2 text-muted-foreground">
+                  {mentor.affiliation}
+                </p>
                 <a
                   href={mentor.vidwan}
                   target="_blank"
@@ -130,38 +150,47 @@ const Team = () => {
           </div>
 
           {/* Divider */}
-          <div className="border-b border-gray-700 w-full max-w-4xl mx-auto my-12"></div>
+          <div className="mx-auto my-12 w-full max-w-4xl border-b border-gray-700"></div>
 
           {/* Advisors */}
           <div className="text-center">
-            <h2 className="text-3xl font-semibold mb-6">Industry Advisors</h2>
-            <div className="flex flex-col md:flex-row justify-center items-center gap-8">
+            <h2 className="mb-6 text-3xl font-semibold">Industry Advisors</h2>
+            <div className="flex flex-col items-center justify-center gap-8 md:flex-row">
               {advisors.map((advisor, index) => (
                 <div
                   key={index}
-                  className="bg-gray-800 text-white rounded-lg shadow-lg p-6 text-center flex flex-col items-center transition-transform transform hover:scale-105 hover:shadow-xl duration-300 w-80 h-80"
+                  className="flex h-80 w-80 transform flex-col items-center rounded-lg bg-gray-800 p-6 text-center text-white shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl"
                 >
-                  <div className="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-primary">
+                  <div className="mb-4 h-32 w-32 overflow-hidden rounded-full border-4 border-primary">
                     {advisor.photo ? (
-                      <img src={advisor.photo} alt={advisor.name} className="w-full h-full object-cover" />
+                      <img
+                        src={advisor.photo}
+                        alt={`${advisor.name}'s photo`}
+                        className="h-full w-full object-cover"
+                      />
                     ) : (
-                      <div className="w-full h-full bg-gray-600 flex items-center justify-center text-white">
-                        No Photo
+                      <div className="flex h-full w-full items-center justify-center bg-gray-600 text-white">
+                        Coming Soon
                       </div>
                     )}
                   </div>
                   <div className="text-center">
-                    <h3 className="text-lg font-semibold mb-2">{advisor.name}</h3>
-                    <p className="text-sm text-gray-400 mb-2">{advisor.designation}</p>
+                    <h3 className="mb-2 text-lg font-semibold">
+                      {advisor.name}
+                    </h3>
+                    <p className="mb-2 text-sm text-gray-400">
+                      {advisor.designation}
+                    </p>
                     <p className="text-sm text-gray-400">
-                      <span className="font-semibold">Area of Support:</span> {advisor.support}
+                      <span className="font-semibold">Area of Support:</span>{' '}
+                      {advisor.support}
                     </p>
                     {advisor.linkedin && (
                       <a
                         href={advisor.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-blue-500 hover:text-blue-600 transition-colors underline"
+                        className="text-blue-500 underline transition-colors hover:text-blue-600"
                       >
                         LinkedIn
                       </a>
