@@ -2,7 +2,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import resumeChecker from '../assets/resumechecker.png';
 import problem from '../assets/ai-collaboration.jpg';
-import jobAnalyzer from '../assets/jobanalyzer.png';
+import visionImage from '../assets/our-vision.png';
 import {
   FileText,
   Search,
@@ -88,7 +88,7 @@ const About = () => {
               <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2">
                 <div className="relative order-2 lg:order-1">
                   <img
-                    src={jobAnalyzer}
+                    src={visionImage}
                     alt="Job description analyzer"
                     className="h-64 w-full rounded-xl object-cover shadow-medium"
                   />
