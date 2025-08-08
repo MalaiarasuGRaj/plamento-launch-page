@@ -47,7 +47,7 @@ const Team = () => {
       linkedin: 'https://www.linkedin.com/in/connectmurali/',
     },
     {
-      name: 'Future Advisor',
+      name: 'Advisor 2',
       designation: 'Expert in AI/NLP',
       support: 'AI / NLP',
       photo: '',
